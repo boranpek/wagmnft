@@ -112,45 +112,31 @@ function App() {
               Consultancy
             </motion.div>
           </div>
-
-          <motion.div
-            className="text-4xl text-white mt-4 text-center flex flex-row"
-            initial={{ scale: 0 }}
-            animate={{
-              scale: 1,
-              transition: {
-                delay: 2,
-                duration: 0.5,
-              },
-            }}
-          >
-            Technical Support and more..
-          </motion.div>
-          <div className="mt-4 text-5xl text-white flex flex-row">
-            {"Everyting You Need To Join World of NFTs!"
-              .split("")
-              .map((item, index, arr) => {
-                console.log(item);
-                return (
-                  <motion.span
-                    className={`relative ${item === " " && "mr-4"} ${
-                      arr.length - 5 <= index && "text-indigo-600 font-bold"
-                    }`}
-                    initial={{ scale: 0, right: -30, top: -30 }}
-                    animate={{
-                      scale: 1,
-                      top: 0,
-                      right: 0,
-                      transition: {
-                        delay: 2.5 + 0.1 * index,
-                        duration: 0.1,
-                      },
-                    }}
-                  >
-                    {item}
-                  </motion.span>
-                );
-              })}
+        </div>
+        <div className="flex flex-col justify-center items-center">
+          <div className="mt-4 text-md text-white flex flex-row mb-4">
+            {"To Join World of NFTs!".split("").map((item, index, arr) => {
+              console.log(item);
+              return (
+                <motion.span
+                  className={`relative ${item === " " && "mr-2"} ${
+                    arr.length - 5 <= index && "text-indigo-600 font-bold"
+                  }`}
+                  initial={{ scale: 0, right: -30, top: -30 }}
+                  animate={{
+                    scale: 1,
+                    top: 0,
+                    right: 0,
+                    transition: {
+                      delay: 2.5 + 0.1 * index,
+                      duration: 0.1,
+                    },
+                  }}
+                >
+                  {item}
+                </motion.span>
+              );
+            })}
           </div>
           <button
             type="button"
