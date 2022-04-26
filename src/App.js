@@ -41,20 +41,34 @@ function App() {
 
       <div className="h-full pb-[20%] pt-[5%] w-full font-workSans flex flex-col justify-between items-center">
         <div className="flex flex-col  items-center">
-          <motion.div
-            className="text-xl font-bold text-indigo-600 font-akshar "
-            initial={{ scale: 0.6 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              transition: {
-                easings: "anticipate",
-                duration: 0.4,
-              },
-            }}
-          >
-            We support creators & businesses on their Web3 journeys.
-          </motion.div>
+          <div>
+            <motion.div
+              className="text-xl font-bold text-indigo-600 font-akshar "
+              initial={{ scale: 0.6 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  easings: "anticipate",
+                  duration: 0.4,
+                },
+              }}
+            >
+              We support creators & businesses on their Web3 journeys.
+            </motion.div>
+            <motion.div
+              className="h-[1px] mt-2 w-full bg-red-700"
+              initial={{ width: 0, opacity: 0.2 }}
+              animate={{
+                width: "100%",
+                opacity: 1,
+                transition: {
+                  easings: "anticipate",
+                  duration: 2,
+                },
+              }}
+            ></motion.div>
+          </div>
           <div className="text-4xl text-white mt-4 text-center">
             All the technological and user experience assistance <br />
             you need for your NFT project.
@@ -114,7 +128,7 @@ function App() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <div className="mt-4 text-md text-white flex flex-row mb-4">
+          <div className="mt-4 text-md text-white flex flex-row mb-4 font-workSans">
             {"To Join World of NFTs!".split("").map((item, index, arr) => {
               console.log(item);
               return (
