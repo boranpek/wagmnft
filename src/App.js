@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BsTwitter } from "react-icons/bs";
 
 function App() {
   return (
@@ -53,9 +54,15 @@ function App() {
         </div>
         <button
           type="button"
+          onClick={() => {
+            window.open("https://twitter.com/WAGMNFT", "_blank");
+          }}
           class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
         >
-          JOIN the Discord
+          <BsTwitter
+            className="hover:cursor-pointer hover:fill-indigo-600"
+            size={24}
+          ></BsTwitter>
         </button>
       </div>
     </div>
