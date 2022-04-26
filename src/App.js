@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 import { BsTwitter } from "react-icons/bs";
+import logo from "../src/assets/logo.png";
 
 function App() {
   return (
     <div className="h-screen w-full bg-black/95">
-      <div className="h-16 w-full bg-black border-b border-b-slate-800 flex justify-between items-center">
+      <div className=" flex justify-between items-center">
         <div></div>
         <motion.div className="text-white text-lg flex flex-col text-center">
-          <motion.div>WAGMNFT.COM</motion.div>
+          <motion.div >
+            <img className="h-[160px]" src={logo} alt="Logo" />
+          </motion.div>
           <motion.div
             className="text-xs"
             initial={{
@@ -24,9 +27,7 @@ function App() {
                 repeatType: "mirror",
               },
             }}
-          >
-            Join the Decentralized apps world in a powerful way.
-          </motion.div>
+          ></motion.div>
         </motion.div>
         <div className="">
           {/*     <button
@@ -38,18 +39,17 @@ function App() {
         </div>
       </div>
 
-      <div className="h-full py-[15%] w-full font-workSans flex flex-col justify-between items-center">
+      <div className="h-full pb-[20%] pt-[5%] w-full font-workSans flex flex-col justify-between items-center">
         <div className="flex flex-col  items-center">
-          <div className="text-xl font-bold text-indigo-600 font-akshar ">
-            WAGMNFT: Ready for Building your Web3 Projects.
+          <div className="text-5xl font-bold text-indigo-600 font-akshar ">
+            We support creators & businesses on their Web3 journeys.
           </div>
           <div className="text-4xl text-white mt-4 text-center">
-            Growth, Consultancy, Smart Contract Audits
-            <br />
-            Technical Support and more..
+            All the technological and user experience assistance <br />
+            you need for your NFT project.
           </div>
-          <div className="mt-4 text-5xl text-white">
-            Everyting You Need To Join World of NFTs!
+          <div className="mt-4 mb-10 text-2xl text-white">
+            Smart Contract and Website Development, Audits, Growth, Consultancy.
           </div>
         </div>
         <button
