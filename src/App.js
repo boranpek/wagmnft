@@ -40,16 +40,112 @@ function App() {
 
       <div className="h-full py-[15%] w-full font-workSans flex flex-col justify-between items-center">
         <div className="flex flex-col  items-center">
-          <div className="text-xl font-bold text-indigo-600 font-akshar ">
+          <motion.div
+            className="text-xl font-bold text-indigo-600 font-akshar "
+            initial={{ scale: 0.6 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                easings: "anticipate",
+                duration: 0.4,
+              },
+            }}
+          >
             WAGMNFT: Ready for Building your Web3 Projects.
+          </motion.div>
+          <div className="text-4xl text-white mt-4 text-center flex flex-row">
+            <motion.div
+              className="mr-4"
+              initial={{ scale: 0 }}
+              animate={{
+                scale: 1,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+            >
+              Smart Contract,
+            </motion.div>
+            <motion.div
+              className="mr-4"
+              initial={{ scale: 0 }}
+              animate={{
+                scale: 1,
+                transition: {
+                  delay: 1,
+                  duration: 0.5,
+                },
+              }}
+            >
+              Audits,
+            </motion.div>
+            <motion.div
+              className="mr-4"
+              initial={{ scale: 0 }}
+              animate={{
+                scale: 1,
+                transition: {
+                  delay: 0.5,
+                  duration: 0.5,
+                },
+              }}
+            >
+              Growth,
+            </motion.div>
+            <motion.div
+              className="mr-4"
+              initial={{ scale: 0 }}
+              animate={{
+                scale: 1,
+                transition: {
+                  delay: 1.5,
+                  duration: 0.5,
+                },
+              }}
+            >
+              Consultancy
+            </motion.div>
           </div>
-          <div className="text-4xl text-white mt-4 text-center">
-            Growth, Consultancy, Smart Contract Audits
-            <br />
+
+          <motion.div
+            className="text-4xl text-white mt-4 text-center flex flex-row"
+            initial={{ scale: 0 }}
+            animate={{
+              scale: 1,
+              transition: {
+                delay: 2,
+                duration: 0.5,
+              },
+            }}
+          >
             Technical Support and more..
-          </div>
-          <div className="mt-4 text-5xl text-white">
-            Everyting You Need To Join World of NFTs!
+          </motion.div>
+          <div className="mt-4 text-5xl text-white flex flex-row">
+            {"Everyting You Need To Join World of NFTs!"
+              .split("")
+              .map((item, index, arr) => {
+                console.log(item);
+                return (
+                  <motion.span
+                    className={`relative ${item === " " && "mr-4"} ${
+                      arr.length - 5 <= index && "text-indigo-600 font-bold"
+                    }`}
+                    initial={{ scale: 0, right: -30, top: -30 }}
+                    animate={{
+                      scale: 1,
+                      top: 0,
+                      right: 0,
+                      transition: {
+                        delay: 2.5 + 0.1 * index,
+                        duration: 0.1,
+                      },
+                    }}
+                  >
+                    {item}
+                  </motion.span>
+                );
+              })}
           </div>
         </div>
         <button
